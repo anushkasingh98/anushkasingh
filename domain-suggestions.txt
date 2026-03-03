@@ -1,0 +1,27 @@
+Domain Name Suggestions for Anushka Singh's Personal Website
+=============================================================
+
+Primary options:
+  anushkasingh.com        — Clean, professional, personal brand
+  anushkasingh.dev        — Tech-forward, developer-friendly
+  anushka.dev             — Short, memorable, modern
+
+Creative / brand options:
+  kathalyst.dev           — Ties to company name, dev-focused
+  anushka.codes           — Playful, technical
+  singhularity.dev        — Clever wordplay (Singh + singularity)
+  cobol-to-kathak.com     — Memorable, tells the whole story
+  rhythmandcode.com       — Blog-inspired, intersection of worlds
+  ghungroos-to-github.com — Tagline-inspired, highly memorable
+  thenushka.com           — Personal, casual, available-likely
+
+Professional options:
+  anushkasingh.co         — Clean, short
+  anushkasingh.io         — Tech-community standard
+  anushka.consulting      — Clear professional intent
+  singh.technology        — Bold, authoritative
+
+Notes:
+  - Check availability at your preferred registrar before purchasing
+  - .dev domains require HTTPS (which is good practice anyway)
+  - Consider securing both .com and .dev if budget allows

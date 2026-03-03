@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anushka Singh — AI Consultant, Legacy Modernization, Kathak Dancer</title>
+  <meta name="description" content="Anushka Singh is the founder of Kathalyst — an AI consultant specializing in legacy modernization, and a trained Kathak dancer.">
+  <meta property="og:title" content="Anushka Singh — AI Consultant & Kathak Dancer">
+  <meta property="og:description" content="Founder of Kathalyst. I help enterprises modernize legacy systems with AI, and I perform Kathak classical dance.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">Anushka Singh</a>
+      <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links">
+        <li><a href="index.html" class="nav__link">Home</a></li>
+        <li><a href="services.html" class="nav__link">Services</a></li>
+        <li><a href="projects.html" class="nav__link">Projects</a></li>
+        <li><a href="blog.html" class="nav__link">Blog</a></li>
+        <li><a href="dance.html" class="nav__link">Dance</a></li>
+        <li><a href="about.html" class="nav__link">About</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero container">
+      <p class="hero__eyebrow">Founder of Kathalyst</p>
+      <h1 class="hero__title">Anushka Singh</h1>
+      <p class="hero__tagline">Making mainframes cool again — and other things nobody expected.</p>
+      <a href="services.html" class="hero__cta">See what I do &rarr;</a>
+    </section>
+
+    <section class="featured container">
+      <div class="featured__header">
+        <h2>Recent Writing</h2>
+        <a href="blog.html" class="featured__more">All posts &rarr;</a>
+      </div>
+      <div class="card-grid" id="featured-blog"></div>
+    </section>
+
+    <section class="featured container">
+      <div class="featured__header">
+        <h2>Projects</h2>
+        <a href="projects.html" class="featured__more">All projects &rarr;</a>
+      </div>
+      <div class="card-grid" id="featured-projects"></div>
+    </section>
+
+    <section class="contact">
+      <div class="container">
+        <h2>Let's Talk</h2>
+        <p>Whether it's legacy modernization, AI strategy, or a Kathak collaboration — I'd love to hear from you.</p>
+        <a href="mailto:hello@anushkasingh.com" class="contact__email">hello@anushkasingh.com</a>
+        <ul class="contact__socials">
+          <li><a href="https://linkedin.com/in/anushkasingh" class="contact__social" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://github.com/anushkasingh" class="contact__social" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="https://twitter.com/anushkasingh" class="contact__social" target="_blank" rel="noopener">Twitter</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <ul class="footer__links">
+        <li><a href="services.html" class="footer__link">Services</a></li>
+        <li><a href="projects.html" class="footer__link">Projects</a></li>
+        <li><a href="blog.html" class="footer__link">Blog</a></li>
+        <li><a href="dance.html" class="footer__link">Dance</a></li>
+        <li><a href="about.html" class="footer__link">About</a></li>
+      </ul>
+      <p class="footer__copy">&copy; 2025 Anushka Singh. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="../shared/js/site-config.js"></script>
+  <script src="../shared/js/markdown-engine.js"></script>
+  <script src="../shared/js/content-loader.js"></script>
+  <script src="../shared/js/tag-filter.js"></script>
+  <script src="../shared/js/router.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    ContentLoader.init({
+      manifestUrl: '../content/blog-manifest.json',
+      containerSelector: '#featured-blog',
+      templateFn: blogCardTemplate
+    });
+    // Load projects separately
+    (async () => {
+      try {
+        const res = await fetch('../content/projects-manifest.json');
+        const items = await res.json();
+        items.sort((a, b) => new Date(b.date) - new Date(a.date));
+        const container = document.getElementById('featured-projects');
+        if (container) {
+          container.innerHTML = items.map(projectCardTemplate).join('');
+        }
+      } catch (e) {
+        console.error('Failed to load projects:', e);
+      }
+    })();
+  </script>
+</body>
+</html>

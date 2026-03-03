@@ -1,0 +1,175 @@
+/* ==========================================================================
+   Design 5: Modern Grid Dark Mode — Responsive Styles
+   ========================================================================== */
+
+/* --- Tablets & Below (max-width: 1024px) --- */
+@media (max-width: 1024px) {
+  :root {
+    --fs-hero: 3.5rem;
+    --fs-4xl:  2.5rem;
+    --fs-3xl:  2rem;
+  }
+
+  .hero-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dance-highlights {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-hero {
+    grid-template-columns: 220px 1fr;
+    gap: var(--space-2xl);
+  }
+}
+
+/* --- Small Tablets (max-width: 768px) --- */
+@media (max-width: 768px) {
+  :root {
+    --fs-hero: 2.75rem;
+    --fs-4xl:  2rem;
+    --fs-3xl:  1.75rem;
+    --fs-2xl:  1.5rem;
+  }
+
+  .hero {
+    padding: var(--space-3xl) 0 var(--space-2xl);
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .about-photo {
+    max-width: 240px;
+    margin: 0 auto;
+  }
+
+  .dance-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dance-highlights {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding: var(--space-2xl) 0;
+  }
+
+  .featured {
+    padding: var(--space-2xl) 0;
+  }
+
+  .contact {
+    padding: var(--space-2xl) 0;
+  }
+
+  .footer__inner {
+    flex-direction: column;
+    gap: var(--space-md);
+    text-align: center;
+  }
+
+  .footer__links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .featured__header {
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  .post__title {
+    font-size: var(--fs-2xl);
+  }
+
+  .dance-hero__title {
+    font-size: var(--fs-3xl);
+  }
+
+  .page-404__code {
+    font-size: 5rem;
+  }
+}
+
+/* --- Mobile (max-width: 480px) --- */
+@media (max-width: 480px) {
+  :root {
+    --fs-hero: 2.25rem;
+    --fs-3xl:  1.5rem;
+    --fs-2xl:  1.25rem;
+    --gutter:  1rem;
+  }
+
+  .header__inner {
+    height: 56px;
+  }
+
+  main {
+    padding-top: 56px;
+  }
+
+  .hero {
+    padding: var(--space-2xl) 0 var(--space-xl);
+  }
+
+  .hero__tagline {
+    font-size: var(--fs-base);
+  }
+
+  .drawer {
+    width: 100vw;
+    max-width: 100vw;
+  }
+
+  .dance-gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-sm);
+  }
+
+  .contact__socials {
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+
+  .tag-filters {
+    gap: var(--space-xs);
+  }
+
+  .tag-btn {
+    font-size: 0.7rem;
+    padding: 4px 10px;
+  }
+
+  .card__body {
+    padding: var(--space-lg);
+  }
+
+  .service-card {
+    padding: var(--space-xl);
+  }
+
+  .page-404__code {
+    font-size: 4rem;
+  }
+}

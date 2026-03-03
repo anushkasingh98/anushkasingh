@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects — Anushka Singh</title>
+  <meta name="description" content="Projects by Anushka Singh — from AI-powered legacy modernization to generative Kathak art.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <ul class="nav__links-left">
+        <li><a href="index.html" class="nav__link">Home</a></li>
+        <li><a href="services.html" class="nav__link">Services</a></li>
+        <li><a href="projects.html" class="nav__link">Projects</a></li>
+      </ul>
+      <a href="index.html" class="nav__logo">Anushka Singh</a>
+      <ul class="nav__links-right">
+        <li><a href="blog.html" class="nav__link">Blog</a></li>
+        <li><a href="dance.html" class="nav__link">Dance</a></li>
+        <li><a href="about.html" class="nav__link">About</a></li>
+      </ul>
+      <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <ul class="nav__mobile-links">
+      <li><a href="index.html" class="nav__link">Home</a></li>
+      <li><a href="services.html" class="nav__link">Services</a></li>
+      <li><a href="projects.html" class="nav__link">Projects</a></li>
+      <li><a href="blog.html" class="nav__link">Blog</a></li>
+      <li><a href="dance.html" class="nav__link">Dance</a></li>
+      <li><a href="about.html" class="nav__link">About</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="page-header">
+      <div class="container">
+        <h1 class="page-header__title">Projects</h1>
+        <p class="page-header__subtitle">Things I've built, shipped, and am still tinkering with.</p>
+      </div>
+    </section>
+
+    <!-- Wave divider: header to content -->
+    <svg class="wave-divider" viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,64 C360,128 720,0 1080,64 C1260,96 1380,48 1440,64 L1440,120 L0,120 Z" fill="#FFFCF8"/>
+    </svg>
+
+    <section class="section section--cream">
+      <div class="container">
+        <div class="tag-filters" role="group" aria-label="Filter projects by tag"></div>
+        <div class="card-grid" id="projects-list"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <ul class="footer__links">
+        <li><a href="services.html" class="footer__link">Services</a></li>
+        <li><a href="projects.html" class="footer__link">Projects</a></li>
+        <li><a href="blog.html" class="footer__link">Blog</a></li>
+        <li><a href="dance.html" class="footer__link">Dance</a></li>
+        <li><a href="about.html" class="footer__link">About</a></li>
+      </ul>
+      <p class="footer__copy">&copy; 2025 Anushka Singh. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="../shared/js/site-config.js"></script>
+  <script src="../shared/js/markdown-engine.js"></script>
+  <script src="../shared/js/content-loader.js"></script>
+  <script src="../shared/js/tag-filter.js"></script>
+  <script src="../shared/js/router.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    ContentLoader.init({
+      manifestUrl: '../content/projects-manifest.json',
+      containerSelector: '#projects-list',
+      templateFn: projectCardTemplate,
+      tagContainerSelector: '.tag-filters'
+    });
+  </script>
+</body>
+</html>

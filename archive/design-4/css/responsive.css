@@ -1,0 +1,241 @@
+/* ============================================
+   Design 4: Organic & Flowing — Responsive
+   ============================================ */
+
+/* --- Tablet and below (1024px) --- */
+@media (max-width: 1024px) {
+  :root {
+    --font-size-hero: 3.5rem;
+    --font-size-4xl: 2.75rem;
+    --font-size-3xl: 2.25rem;
+    --space-section: 5rem;
+  }
+
+  .card-grid {
+    column-count: 2;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-hero {
+    grid-template-columns: 1fr 1.2fr;
+    gap: var(--space-lg);
+  }
+
+  .dance-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dance-gallery__item:nth-child(1) {
+    grid-row: span 1;
+  }
+
+  .dance-highlights {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* --- Mobile nav breakpoint (768px) --- */
+@media (max-width: 768px) {
+  :root {
+    --font-size-hero: 2.75rem;
+    --font-size-4xl: 2.25rem;
+    --font-size-3xl: 1.875rem;
+    --font-size-2xl: 1.5rem;
+    --space-section: 4rem;
+  }
+
+  /* Nav becomes stacked on mobile */
+  .nav__toggle {
+    display: block;
+  }
+
+  .nav__inner {
+    justify-content: center;
+  }
+
+  .nav__logo {
+    position: relative;
+    z-index: 5;
+  }
+
+  .nav__links-left,
+  .nav__links-right {
+    display: none;
+    margin: 0;
+  }
+
+  /* Mobile menu */
+  .nav__mobile-links {
+    display: none;
+    position: fixed;
+    top: 72px;
+    left: 0;
+    right: 0;
+    background: rgba(245, 237, 227, 0.98);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: var(--space-lg);
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-md);
+    list-style: none;
+    box-shadow: var(--shadow-elevated);
+    border-radius: 0 0 var(--border-radius-lg) var(--border-radius-lg);
+    z-index: 999;
+  }
+
+  .nav__mobile-links.open {
+    display: flex;
+  }
+
+  .nav__mobile-links .nav__link {
+    font-size: var(--font-size-lg);
+    padding: var(--space-xs) var(--space-md);
+  }
+
+  /* Toggle animation */
+  .nav__toggle[aria-expanded="true"] span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .nav__toggle[aria-expanded="true"] span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .nav__toggle[aria-expanded="true"] span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  /* Hero */
+  .hero {
+    min-height: 80vh;
+    padding-top: calc(72px + var(--space-xl));
+  }
+
+  .hero__tagline {
+    font-size: var(--font-size-base);
+  }
+
+  /* Cards — single column */
+  .card-grid {
+    column-count: 1;
+  }
+
+  /* Services */
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* About */
+  .about-hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .about-photo {
+    max-width: 320px;
+    margin: 0 auto;
+    aspect-ratio: 1;
+    border-radius: 50%;
+  }
+
+  /* Dance */
+  .dance-hero {
+    min-height: 50vh;
+  }
+
+  .dance-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dance-highlights {
+    grid-template-columns: 1fr;
+  }
+
+  .dance-section p {
+    font-size: var(--font-size-base);
+  }
+
+  /* Post */
+  .post__title {
+    font-size: var(--font-size-3xl);
+  }
+
+  /* Contact */
+  .contact__email {
+    font-size: var(--font-size-lg);
+  }
+
+  .contact__socials {
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
+
+  /* Featured */
+  .featured__header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* Footer */
+  .footer__links {
+    flex-direction: column;
+    gap: var(--space-xs);
+  }
+
+  /* Page header */
+  .page-header {
+    padding: calc(72px + var(--space-xl)) 0 var(--space-lg);
+  }
+}
+
+/* --- Small mobile (480px) --- */
+@media (max-width: 480px) {
+  :root {
+    --font-size-hero: 2.25rem;
+    --font-size-4xl: 1.875rem;
+    --font-size-3xl: 1.5rem;
+    --font-size-2xl: 1.25rem;
+    --space-section: 3rem;
+  }
+
+  .container,
+  .container--narrow {
+    padding: 0 var(--space-md);
+  }
+
+  .nav__inner {
+    padding: 0 var(--space-md);
+  }
+
+  .dance-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .dance-gallery__item {
+    aspect-ratio: 3 / 4;
+  }
+
+  .hero__ornament {
+    margin-bottom: var(--space-md);
+  }
+
+  .service-card {
+    padding: var(--space-lg) var(--space-md);
+  }
+
+  .card__body {
+    padding: var(--space-sm) var(--space-md) var(--space-md);
+  }
+
+  .page-404__code {
+    font-size: 5rem;
+  }
+
+  .contact {
+    padding: var(--space-xl) var(--space-md);
+  }
+}

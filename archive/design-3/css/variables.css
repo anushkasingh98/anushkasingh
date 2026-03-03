@@ -1,0 +1,51 @@
+:root {
+  /* Colors — Warm Brutalist */
+  --color-bg: #E8DFD0;
+  --color-text: #1A1410;
+  --color-accent: #BF5B21;
+  --color-accent-hover: #A04919;
+  --color-secondary: #5C6B4A;
+  --color-muted: #6B5E50;
+  --color-border: #1A1410;
+  --color-card-bg: #E8DFD0;
+  --color-surface: #DDD3C2;
+  --color-inverse-bg: #1A1410;
+  --color-inverse-text: #E8DFD0;
+
+  /* Typography — Archivo Black + Space Mono */
+  --font-heading: 'Archivo Black', 'Impact', 'Arial Black', sans-serif;
+  --font-mono: 'Space Mono', 'Courier New', monospace;
+  --font-size-base: 1.0625rem;
+  --font-size-sm: 0.8125rem;
+  --font-size-md: 0.9375rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem;
+  --font-size-2xl: 2rem;
+  --font-size-3xl: 3rem;
+  --font-size-4xl: 4rem;
+  --font-size-5xl: 5rem;
+  --font-size-hero: 7rem;
+  --line-height-body: 1.65;
+  --line-height-heading: 1.05;
+
+  /* Spacing */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+  --space-2xl: 6rem;
+  --space-section: 8rem;
+
+  /* Layout */
+  --max-width: 1100px;
+  --max-width-narrow: 760px;
+  --border-radius: 0px;
+  --border-weight: 4px;
+  --border-heavy: var(--border-weight) solid var(--color-border);
+  --border-accent: var(--border-weight) solid var(--color-accent);
+
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s ease;
+}
