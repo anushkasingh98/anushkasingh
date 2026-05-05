@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project — Anushka Singh</title>
+  <meta name="description" content="Project details by Anushka Singh.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <ul class="nav__links-left">
+        <li><a href="index.html" class="nav__link">Home</a></li>
+        <li><a href="services.html" class="nav__link">Services</a></li>
+        <li><a href="projects.html" class="nav__link">Projects</a></li>
+      </ul>
+      <a href="index.html" class="nav__logo">Anushka Singh</a>
+      <ul class="nav__links-right">
+        <li><a href="blog.html" class="nav__link">Blog</a></li>
+        <li><a href="dance.html" class="nav__link">Dance</a></li>
+        <li><a href="about.html" class="nav__link">About</a></li>
+      </ul>
+      <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <ul class="nav__mobile-links">
+      <li><a href="index.html" class="nav__link">Home</a></li>
+      <li><a href="services.html" class="nav__link">Services</a></li>
+      <li><a href="projects.html" class="nav__link">Projects</a></li>
+      <li><a href="blog.html" class="nav__link">Blog</a></li>
+      <li><a href="dance.html" class="nav__link">Dance</a></li>
+      <li><a href="about.html" class="nav__link">About</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <article class="post container--narrow">
+      <a href="projects.html" class="post__back">&larr; All Projects</a>
+      <header class="post__header">
+        <time class="post__date" id="project-date"></time>
+        <h1 class="post__title" id="project-title">Loading...</h1>
+        <div class="post__tags" id="project-tags"></div>
+      </header>
+      <div class="post__content" id="project-content"></div>
+    </article>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <ul class="footer__links">
+        <li><a href="services.html" class="footer__link">Services</a></li>
+        <li><a href="projects.html" class="footer__link">Projects</a></li>
+        <li><a href="blog.html" class="footer__link">Blog</a></li>
+        <li><a href="dance.html" class="footer__link">Dance</a></li>
+        <li><a href="about.html" class="footer__link">About</a></li>
+      </ul>
+      <p class="footer__copy">&copy; 2025 Anushka Singh. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="../shared/js/site-config.js"></script>
+  <script src="../shared/js/markdown-engine.js"></script>
+  <script src="../shared/js/content-loader.js"></script>
+  <script src="../shared/js/tag-filter.js"></script>
+  <script src="../shared/js/router.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    Router.loadBySlug({
+      manifestUrl: '../content/projects-manifest.json',
+      contentBase: '../content/',
+      renderFn: (item, html) => {
+        document.title = item.title + ' — Anushka Singh';
+        document.getElementById('project-title').textContent = item.title;
+        document.getElementById('project-date').textContent = Router.formatDate(item.date);
+        document.getElementById('project-date').setAttribute('datetime', item.date);
+        document.getElementById('project-content').innerHTML = html;
+        if (item.tags) {
+          document.getElementById('project-tags').innerHTML = item.tags.map(t =>
+            '<span class="card__tag">' + t + '</span>'
+          ).join('');
+        }
+      },
+      notFoundFn: () => {
+        document.getElementById('project-title').textContent = 'Project Not Found';
+        document.getElementById('project-content').innerHTML = '<p>This project doesn\'t exist. <a href="projects.html">Browse all projects</a>.</p>';
+      }
+    });
+  </script>
+</body>
+</html>

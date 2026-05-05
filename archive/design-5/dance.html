@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kathak — Anushka Singh</title>
+  <meta name="description" content="Anushka Singh's Kathak dance practice — classical Indian dance, performances, and the intersection of art and technology.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script>
+    (function() {
+      var saved = localStorage.getItem('theme');
+      if (saved === 'light') document.documentElement.style.background = '#F5F0EB';
+    })();
+  </script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header" role="banner">
+    <div class="header__inner">
+      <a href="index.html" class="header__logo">Anushka Singh</a>
+      <div class="header__actions">
+        <button class="theme-toggle" aria-label="Toggle dark/light mode">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="hamburger" aria-label="Open navigation" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="drawer-overlay"></div>
+
+  <nav class="drawer" role="navigation" aria-label="Main navigation">
+    <div class="drawer__header">
+      <span class="drawer__label">Navigation</span>
+      <button class="drawer__close" aria-label="Close navigation">&times;</button>
+    </div>
+    <div class="drawer__nav">
+      <ul class="drawer__links">
+        <li><a href="index.html" class="drawer__link">Home</a></li>
+        <li><a href="services.html" class="drawer__link">Services</a></li>
+        <li><a href="projects.html" class="drawer__link">Projects</a></li>
+        <li><a href="blog.html" class="drawer__link">Blog</a></li>
+        <li><a href="dance.html" class="drawer__link">Dance</a></li>
+        <li><a href="about.html" class="drawer__link">About</a></li>
+      </ul>
+    </div>
+    <div class="drawer__footer">
+      <a href="mailto:hello@anushkasingh.com" class="drawer__email">hello@anushkasingh.com</a>
+      <ul class="drawer__socials">
+        <li><a href="https://linkedin.com/in/anushkasingh" class="drawer__social" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://github.com/anushkasingh" class="drawer__social" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://twitter.com/anushkasingh" class="drawer__social" target="_blank" rel="noopener">Twitter</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Dance Hero with Spotlight Effect -->
+    <section class="dance-hero">
+      <div>
+        <h1 class="dance-hero__title">Kathak</h1>
+        <p class="dance-hero__subtitle">Where rhythm meets storytelling. Classical Indian dance rooted in tradition, performed with precision and soul.</p>
+      </div>
+    </section>
+
+    <!-- The Art — with Spotlight Container -->
+    <section class="dance-section container">
+      <div class="spotlight">
+        <div class="section-header">
+          <p class="section-header__eyebrow">The Art Form</p>
+          <h2 class="section-header__title">About Kathak</h2>
+        </div>
+        <p>Kathak is one of the eight major forms of Indian classical dance. Originating from Northern India, it combines intricate footwork, expressive storytelling, and rhythmic precision. The word 'Kathak' comes from 'katha' — meaning story. Every performance is a conversation between rhythm, emotion, and narrative.</p>
+        <br>
+        <p>Trained under renowned gurus in the Lucknow gharana tradition, I've been practicing Kathak for over 15 years. The discipline of daily riyaaz (practice) mirrors the discipline of writing clean code — both demand patience, precision, and an obsessive attention to detail.</p>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="dance-section section--alt">
+      <div class="container">
+        <div class="section-header">
+          <p class="section-header__eyebrow">On Stage</p>
+          <h2 class="section-header__title">Gallery</h2>
+        </div>
+        <div class="dance-gallery">
+          <div class="dance-gallery__item">Performance Photo 1</div>
+          <div class="dance-gallery__item">Performance Photo 2</div>
+          <div class="dance-gallery__item">Performance Photo 3</div>
+          <div class="dance-gallery__item">Performance Photo 4</div>
+          <div class="dance-gallery__item">Performance Photo 5</div>
+          <div class="dance-gallery__item">Performance Photo 6</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Highlights -->
+    <section class="dance-section container">
+      <div class="section-header">
+        <p class="section-header__eyebrow">Milestones</p>
+        <h2 class="section-header__title">Highlights</h2>
+      </div>
+      <ul class="dance-highlights">
+        <li>Solo performances at national cultural festivals</li>
+        <li>Collaborative pieces blending classical Kathak with contemporary music</li>
+        <li>Workshops on rhythm and movement for tech communities</li>
+        <li>Exploring generative art inspired by Kathak patterns</li>
+      </ul>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact">
+      <div class="container">
+        <h2>Book a Performance</h2>
+        <p>Interested in a Kathak performance, collaboration, or workshop? I'd love to hear from you.</p>
+        <a href="mailto:hello@anushkasingh.com" class="contact__email">hello@anushkasingh.com</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <ul class="footer__links">
+        <li><a href="services.html" class="footer__link">Services</a></li>
+        <li><a href="projects.html" class="footer__link">Projects</a></li>
+        <li><a href="blog.html" class="footer__link">Blog</a></li>
+        <li><a href="dance.html" class="footer__link">Dance</a></li>
+        <li><a href="about.html" class="footer__link">About</a></li>
+      </ul>
+      <p class="footer__copy">&copy; 2025 Anushka Singh. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    if (localStorage.getItem('theme') === 'light') {
+      document.body.classList.add('light-mode');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+/* === TABLET (max-width: 1024px) === */
+@media (max-width: 1024px) {
+  :root {
+    --font-size-hero: 3.5rem;
+    --font-size-4xl: 2.75rem;
+    --font-size-3xl: 2.25rem;
+    --space-section: 5rem;
+  }
+
+  .card-grid {
+    gap: var(--space-lg);
+  }
+
+  .services-grid {
+    gap: var(--space-lg);
+  }
+
+  .about-hero {
+    gap: var(--space-xl);
+  }
+
+  .dance-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* === MOBILE (max-width: 768px) === */
+@media (max-width: 768px) {
+  :root {
+    --font-size-hero: 2.75rem;
+    --font-size-4xl: 2.25rem;
+    --font-size-3xl: 1.75rem;
+    --font-size-2xl: 1.5rem;
+    --space-section: 4rem;
+  }
+
+  .container,
+  .container--narrow {
+    padding: 0 var(--space-md);
+  }
+
+  /* Nav mobile */
+  .nav__links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--color-bg);
+    border-bottom: var(--border-thin);
+    padding: var(--space-md) var(--space-lg);
+    gap: var(--space-md);
+  }
+
+  .nav__links.open {
+    display: flex;
+  }
+
+  .nav__toggle {
+    display: block;
+  }
+
+  /* Grids to single column */
+  .card-grid,
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .about-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .about-photo {
+    max-height: 400px;
+  }
+
+  .dance-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .dance-hero__title {
+    font-size: var(--font-size-3xl);
+  }
+
+  .hero__tagline {
+    font-size: var(--font-size-base);
+  }
+
+  .featured__header {
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  .contact__email {
+    font-size: var(--font-size-xl);
+  }
+
+  .page-404__code {
+    font-size: 5rem;
+  }
+}
+
+/* === SMALL MOBILE (max-width: 480px) === */
+@media (max-width: 480px) {
+  :root {
+    --font-size-hero: 2.25rem;
+    --font-size-4xl: 1.75rem;
+    --space-section: 3rem;
+  }
+
+  .dance-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .contact__socials {
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+}

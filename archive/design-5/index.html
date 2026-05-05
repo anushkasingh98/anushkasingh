@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anushka Singh — AI Consultant, Legacy Modernization, Kathak Dancer</title>
+  <meta name="description" content="Anushka Singh is the founder of Kathalyst — an AI consultant specializing in legacy modernization, and a trained Kathak dancer.">
+  <meta property="og:title" content="Anushka Singh — AI Consultant & Kathak Dancer">
+  <meta property="og:description" content="Founder of Kathalyst. I help enterprises modernize legacy systems with AI, and I perform Kathak classical dance.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script>
+    // Prevent flash of wrong theme
+    (function() {
+      var saved = localStorage.getItem('theme');
+      if (saved === 'light') document.documentElement.style.background = '#F5F0EB';
+    })();
+  </script>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header" role="banner">
+    <div class="header__inner">
+      <a href="index.html" class="header__logo">Anushka Singh</a>
+      <div class="header__actions">
+        <button class="theme-toggle" aria-label="Toggle dark/light mode">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="hamburger" aria-label="Open navigation" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Drawer Overlay -->
+  <div class="drawer-overlay"></div>
+
+  <!-- Side Drawer -->
+  <nav class="drawer" role="navigation" aria-label="Main navigation">
+    <div class="drawer__header">
+      <span class="drawer__label">Navigation</span>
+      <button class="drawer__close" aria-label="Close navigation">&times;</button>
+    </div>
+    <div class="drawer__nav">
+      <ul class="drawer__links">
+        <li><a href="index.html" class="drawer__link">Home</a></li>
+        <li><a href="services.html" class="drawer__link">Services</a></li>
+        <li><a href="projects.html" class="drawer__link">Projects</a></li>
+        <li><a href="blog.html" class="drawer__link">Blog</a></li>
+        <li><a href="dance.html" class="drawer__link">Dance</a></li>
+        <li><a href="about.html" class="drawer__link">About</a></li>
+      </ul>
+    </div>
+    <div class="drawer__footer">
+      <a href="mailto:hello@anushkasingh.com" class="drawer__email">hello@anushkasingh.com</a>
+      <ul class="drawer__socials">
+        <li><a href="https://linkedin.com/in/anushkasingh" class="drawer__social" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://github.com/anushkasingh" class="drawer__social" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://twitter.com/anushkasingh" class="drawer__social" target="_blank" rel="noopener">Twitter</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero container">
+      <p class="hero__eyebrow">Founder of Kathalyst</p>
+      <h1 class="hero__title">Anushka Singh</h1>
+      <p class="hero__tagline">I help enterprises escape the 1970s and startups survive the 2020s.</p>
+      <a href="services.html" class="hero__cta">See what I do &rarr;</a>
+
+      <!-- Hero Info Grid -->
+      <div class="hero-grid">
+        <div class="hero-grid__card">
+          <div class="hero-grid__icon">&#9000;</div>
+          <h3 class="hero-grid__title">Legacy Modernization</h3>
+          <p class="hero-grid__text">Transforming COBOL and mainframe systems into modern, cloud-native architectures with AI-assisted analysis.</p>
+        </div>
+        <div class="hero-grid__card">
+          <div class="hero-grid__icon">&#10024;</div>
+          <h3 class="hero-grid__title">AI Strategy</h3>
+          <p class="hero-grid__text">Practical AI implementation that goes beyond the buzzwords. From proof of concept to production.</p>
+        </div>
+        <div class="hero-grid__card">
+          <div class="hero-grid__icon">&#9835;</div>
+          <h3 class="hero-grid__title">Kathak Dance</h3>
+          <p class="hero-grid__text">Trained classical dancer bringing discipline, precision, and storytelling from the stage to the codebase.</p>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider container">
+
+    <!-- Recent Writing -->
+    <section class="featured container">
+      <div class="featured__header">
+        <h2>Recent Writing</h2>
+        <a href="blog.html" class="featured__more">All posts &rarr;</a>
+      </div>
+      <div class="card-grid" id="featured-blog"></div>
+    </section>
+
+    <!-- Projects -->
+    <section class="featured container">
+      <div class="featured__header">
+        <h2>Projects</h2>
+        <a href="projects.html" class="featured__more">All projects &rarr;</a>
+      </div>
+      <div class="card-grid" id="featured-projects"></div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact">
+      <div class="container">
+        <h2>Let's Talk</h2>
+        <p>Whether it's legacy modernization, AI strategy, or a Kathak collaboration — I'd love to hear from you.</p>
+        <a href="mailto:hello@anushkasingh.com" class="contact__email">hello@anushkasingh.com</a>
+        <ul class="contact__socials">
+          <li><a href="https://linkedin.com/in/anushkasingh" class="contact__social" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://github.com/anushkasingh" class="contact__social" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="https://twitter.com/anushkasingh" class="contact__social" target="_blank" rel="noopener">Twitter</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <ul class="footer__links">
+        <li><a href="services.html" class="footer__link">Services</a></li>
+        <li><a href="projects.html" class="footer__link">Projects</a></li>
+        <li><a href="blog.html" class="footer__link">Blog</a></li>
+        <li><a href="dance.html" class="footer__link">Dance</a></li>
+        <li><a href="about.html" class="footer__link">About</a></li>
+      </ul>
+      <p class="footer__copy">&copy; 2025 Anushka Singh. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="../shared/js/site-config.js"></script>
+  <script src="../shared/js/markdown-engine.js"></script>
+  <script src="../shared/js/content-loader.js"></script>
+  <script src="../shared/js/tag-filter.js"></script>
+  <script src="../shared/js/router.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // Apply saved theme immediately
+    if (localStorage.getItem('theme') === 'light') {
+      document.body.classList.add('light-mode');
+    }
+
+    ContentLoader.init({
+      manifestUrl: '../content/blog-manifest.json',
+      containerSelector: '#featured-blog',
+      templateFn: blogCardTemplate
+    });
+    // Load projects
+    (async () => {
+      try {
+        const res = await fetch('../content/projects-manifest.json');
+        const items = await res.json();
+        items.sort((a, b) => new Date(b.date) - new Date(a.date));
+        const container = document.getElementById('featured-projects');
+        if (container) {
+          container.innerHTML = items.map(projectCardTemplate).join('');
+        }
+      } catch (e) {
+        console.error('Failed to load projects:', e);
+      }
+    })();
+  </script>
+</body>
+</html>

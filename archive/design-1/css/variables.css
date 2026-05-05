@@ -1,0 +1,45 @@
+:root {
+  /* Colors */
+  --color-bg: #FAF7F2;
+  --color-text: #2D2D2D;
+  --color-accent: #C4652A;
+  --color-accent-hover: #A8541F;
+  --color-secondary: #8B9D77;
+  --color-muted: #7A7A7A;
+  --color-border: #E0DAD0;
+  --color-card-bg: #FFFFFF;
+  --color-hero-overlay: rgba(45, 45, 45, 0.6);
+
+  /* Typography */
+  --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-sans: 'Source Sans 3', 'Segoe UI', Roboto, sans-serif;
+  --font-size-base: 1.125rem;
+  --font-size-sm: 0.875rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem;
+  --font-size-2xl: 2rem;
+  --font-size-3xl: 2.75rem;
+  --font-size-4xl: 3.75rem;
+  --font-size-hero: 5rem;
+  --line-height-body: 1.7;
+  --line-height-heading: 1.2;
+
+  /* Spacing */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+  --space-2xl: 6rem;
+  --space-section: 8rem;
+
+  /* Layout */
+  --max-width: 1200px;
+  --max-width-narrow: 760px;
+  --border-radius: 2px;
+  --border-thin: 1px solid var(--color-border);
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+}

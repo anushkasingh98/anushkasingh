@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects — Anushka Singh</title>
+  <meta name="description" content="Projects by Anushka Singh — from AI-powered legacy modernization to generative Kathak art.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">Anushka Singh</a>
+      <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links">
+        <li><a href="index.html" class="nav__link">Home</a></li>
+        <li><a href="services.html" class="nav__link">Services</a></li>
+        <li><a href="projects.html" class="nav__link">Projects</a></li>
+        <li><a href="blog.html" class="nav__link">Blog</a></li>
+        <li><a href="dance.html" class="nav__link">Dance</a></li>
+        <li><a href="about.html" class="nav__link">About</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <section class="section container">
+      <div class="section-header">
+        <h1 class="section-header__title">Projects</h1>
+        <p class="section-header__subtitle">Things I've built, shipped, and am still tinkering with.</p>
+      </div>
+      <div class="tag-filters" role="group" aria-label="Filter projects by tag"></div>
+      <div class="card-grid" id="projects-list"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <ul class="footer__links">
+        <li><a href="services.html" class="footer__link">Services</a></li>
+        <li><a href="projects.html" class="footer__link">Projects</a></li>
+        <li><a href="blog.html" class="footer__link">Blog</a></li>
+        <li><a href="dance.html" class="footer__link">Dance</a></li>
+        <li><a href="about.html" class="footer__link">About</a></li>
+      </ul>
+      <p class="footer__copy">&copy; 2025 Anushka Singh. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="../shared/js/site-config.js"></script>
+  <script src="../shared/js/markdown-engine.js"></script>
+  <script src="../shared/js/content-loader.js"></script>
+  <script src="../shared/js/tag-filter.js"></script>
+  <script src="../shared/js/router.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    ContentLoader.init({
+      manifestUrl: '../content/projects-manifest.json',
+      containerSelector: '#projects-list',
+      templateFn: projectCardTemplate,
+      tagContainerSelector: '.tag-filters'
+    });
+  </script>
+</body>
+</html>
