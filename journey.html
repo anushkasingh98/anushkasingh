@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Entrepreneurship Journey - Anushka Singh</title>
+  <meta content="Anushka Singh's entrepreneurship journey and milestones" name="description">
+  <meta content="Anushka Singh, entrepreneurship, journey, timeline, milestones" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- Custom Timeline CSS -->
+  <style>
+    .journey-hero {
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(assets/img/hero-bg.jpg);
+      background-size: cover;
+      background-position: center;
+      padding: 150px 0 80px 0;
+      color: #fff;
+      text-align: center;
+    }
+
+    .journey-hero h1 {
+      font-size: 48px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .journey-hero p {
+      font-size: 18px;
+      opacity: 0.9;
+    }
+
+    .timeline-section {
+      padding: 80px 0;
+      background: #f8f9fa;
+    }
+
+    .timeline {
+      position: relative;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 0;
+    }
+
+    /* Center line */
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 4px;
+      background: linear-gradient(180deg, #0078ff 0%, #00d4ff 100%);
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -2px;
+      border-radius: 2px;
+    }
+
+    .timeline-item {
+      position: relative;
+      background-color: inherit;
+      width: 50%;
+      margin-bottom: 50px;
+    }
+
+    /* Left side items */
+    .timeline-item.left {
+      left: 0;
+      padding-right: 50px;
+    }
+
+    /* Right side items */
+    .timeline-item.right {
+      left: 50%;
+      padding-left: 50px;
+    }
+
+    /* Timeline dot */
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: #fff;
+      border: 4px solid #0078ff;
+      border-radius: 50%;
+      top: 15px;
+      z-index: 1;
+      box-shadow: 0 0 0 4px rgba(0, 120, 255, 0.2);
+    }
+
+    .timeline-item.left::before {
+      right: -10px;
+    }
+
+    .timeline-item.right::before {
+      left: -10px;
+    }
+
+    /* Content box */
+    .timeline-content {
+      padding: 30px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+    }
+
+    .timeline-content:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 35px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Arrow pointer */
+    .timeline-item.left .timeline-content::before {
+      content: '';
+      position: absolute;
+      right: -15px;
+      top: 15px;
+      width: 0;
+      height: 0;
+      border-left: 15px solid #fff;
+      border-top: 15px solid transparent;
+      border-bottom: 15px solid transparent;
+    }
+
+    .timeline-item.right .timeline-content::before {
+      content: '';
+      position: absolute;
+      left: -15px;
+      top: 15px;
+      width: 0;
+      height: 0;
+      border-right: 15px solid #fff;
+      border-top: 15px solid transparent;
+      border-bottom: 15px solid transparent;
+    }
+
+    .timeline-date {
+      display: inline-block;
+      padding: 8px 20px;
+      background: linear-gradient(45deg, #0078ff, #00d4ff);
+      color: #fff;
+      border-radius: 20px;
+      font-weight: 600;
+      font-size: 14px;
+      margin-bottom: 15px;
+      box-shadow: 0 3px 10px rgba(0, 120, 255, 0.3);
+    }
+
+    .timeline-title {
+      font-size: 24px;
+      font-weight: 700;
+      color: #1e1e1e;
+      margin-bottom: 15px;
+    }
+
+    .timeline-description {
+      color: #555;
+      line-height: 1.8;
+      font-size: 15px;
+    }
+
+    .timeline-tags {
+      margin-top: 15px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .timeline-tag {
+      display: inline-block;
+      padding: 5px 12px;
+      background: #e9f5ff;
+      color: #0078ff;
+      border-radius: 15px;
+      font-size: 12px;
+      font-weight: 500;
+    }
+
+    /* Responsive design */
+    @media screen and (max-width: 768px) {
+      .timeline::after {
+        left: 31px;
+      }
+
+      .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+      }
+
+      .timeline-item.left,
+      .timeline-item.right {
+        left: 0%;
+        padding-left: 70px;
+      }
+
+      .timeline-item::before {
+        left: 21px;
+      }
+
+      .timeline-item.left::before,
+      .timeline-item.right::before {
+        left: 21px;
+      }
+
+      .timeline-item.left .timeline-content::before,
+      .timeline-item.right .timeline-content::before {
+        left: -15px;
+        border-left: none;
+        border-right: 15px solid #fff;
+      }
+
+      .journey-hero h1 {
+        font-size: 32px;
+      }
+
+      .journey-hero p {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <h1 class="logo"><a href="index.html">Anushka Singh</a></h1>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto" href="index.html#hero">Home</a></li>
+          <li><a class="nav-link scrollto" href="index.html#about">About</a></li>
+          <li><a class="nav-link scrollto" href="index.html#skills">Skills</a></li>
+          <li><a class="nav-link scrollto" href="index.html#portfolio">Portfolio</a></li>
+          <li><a class="nav-link active" href="journey.html">Journey</a></li>
+          <li><a class="nav-link scrollto" href="index.html#contact">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- Hero Section -->
+  <div class="journey-hero">
+    <div class="container">
+      <h1>My Entrepreneurship Journey</h1>
+      <p>A timeline of milestones, ventures, and lessons learned</p>
+    </div>
+  </div>
+
+  <main id="main">
+    <!-- Timeline Section -->
+    <section class="timeline-section">
+      <div class="container">
+        <div class="timeline">
+
+          <!-- Timeline Item 1 (Most Recent) -->
+          <div class="timeline-item right">
+            <div class="timeline-content">
+              <span class="timeline-date">May 2026</span>
+              <h3 class="timeline-title">Latest Milestone</h3>
+              <p class="timeline-description">
+                Add your most recent entrepreneurship achievement or venture here. This could be a new product launch,
+                funding round, partnership, or significant business milestone.
+              </p>
+              <div class="timeline-tags">
+                <span class="timeline-tag">Growth</span>
+                <span class="timeline-tag">Innovation</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Item 2 -->
+          <div class="timeline-item left">
+            <div class="timeline-content">
+              <span class="timeline-date">January 2026</span>
+              <h3 class="timeline-title">Major Achievement</h3>
+              <p class="timeline-description">
+                Describe a significant achievement or turning point in your entrepreneurial journey. Include details
+                about challenges overcome and impact created.
+              </p>
+              <div class="timeline-tags">
+                <span class="timeline-tag">Leadership</span>
+                <span class="timeline-tag">Scale</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Item 3 -->
+          <div class="timeline-item right">
+            <div class="timeline-content">
+              <span class="timeline-date">September 2025</span>
+              <h3 class="timeline-title">Product Launch</h3>
+              <p class="timeline-description">
+                Share details about a product or service launch. What problem did it solve? What was the market response?
+                Include metrics or success indicators if applicable.
+              </p>
+              <div class="timeline-tags">
+                <span class="timeline-tag">Product</span>
+                <span class="timeline-tag">Launch</span>
+                <span class="timeline-tag">Fintech</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Item 4 -->
+          <div class="timeline-item left">
+            <div class="timeline-content">
+              <span class="timeline-date">March 2025</span>
+              <h3 class="timeline-title">Team Expansion</h3>
+              <p class="timeline-description">
+                Highlight key team building moments or organizational milestones. How did you scale your team?
+                What culture did you build?
+              </p>
+              <div class="timeline-tags">
+                <span class="timeline-tag">Team</span>
+                <span class="timeline-tag">Culture</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Item 5 -->
+          <div class="timeline-item right">
+            <div class="timeline-content">
+              <span class="timeline-date">October 2024</span>
+              <h3 class="timeline-title">Strategic Partnership</h3>
+              <p class="timeline-description">
+                Document important partnerships, collaborations, or business relationships that helped propel
+                your ventures forward.
+              </p>
+              <div class="timeline-tags">
+                <span class="timeline-tag">Partnership</span>
+                <span class="timeline-tag">Strategy</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Item 6 -->
+          <div class="timeline-item left">
+            <div class="timeline-content">
+              <span class="timeline-date">June 2024</span>
+              <h3 class="timeline-title">First Customer Win</h3>
+              <p class="timeline-description">
+                Share the story of acquiring your first major customer or reaching a significant user milestone.
+                What did you learn? How did it validate your vision?
+              </p>
+              <div class="timeline-tags">
+                <span class="timeline-tag">Customer Success</span>
+                <span class="timeline-tag">Validation</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Item 7 -->
+          <div class="timeline-item right">
+            <div class="timeline-content">
+              <span class="timeline-date">January 2024</span>
+              <h3 class="timeline-title">Company Founded</h3>
+              <p class="timeline-description">
+                Tell the story of how it all began. What inspired you to start? What problem were you passionate
+                about solving? What were the initial challenges?
+              </p>
+              <div class="timeline-tags">
+                <span class="timeline-tag">Founding</span>
+                <span class="timeline-tag">Vision</span>
+                <span class="timeline-tag">Beginning</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Timeline Item 8 - Origin Story -->
+          <div class="timeline-item left">
+            <div class="timeline-content">
+              <span class="timeline-date">Earlier Years</span>
+              <h3 class="timeline-title">The Entrepreneurial Spark</h3>
+              <p class="timeline-description">
+                Share what first inspired you to become an entrepreneur. Was there a specific moment, mentor,
+                or experience that set you on this path? What early lessons shaped your approach?
+              </p>
+              <div class="timeline-tags">
+                <span class="timeline-tag">Inspiration</span>
+                <span class="timeline-tag">Origin</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="copyright-box">
+            <p class="copyright">&copy; <span id="year"></span> <strong>Anushka Singh</strong>. All Rights Reserved</p>
+            <div class="credits">
+              Template by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
