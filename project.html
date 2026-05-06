@@ -81,16 +81,16 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <script src="../shared/js/site-config.js"></script>
-  <script src="../shared/js/markdown-engine.js"></script>
-  <script src="../shared/js/content-loader.js"></script>
-  <script src="../shared/js/tag-filter.js"></script>
-  <script src="../shared/js/router.js"></script>
+  <script src="shared/js/site-config.js"></script>
+  <script src="shared/js/markdown-engine.js"></script>
+  <script src="shared/js/content-loader.js"></script>
+  <script src="shared/js/tag-filter.js"></script>
+  <script src="shared/js/router.js"></script>
   <script src="js/main.js"></script>
   <script>
     Router.loadBySlug({
-      manifestUrl: '../content/projects-manifest.json',
-      contentBase: '../content/',
+      manifestUrl: 'content/projects-manifest.json',
+      contentBase: 'content/',
       renderFn: (item, html) => {
         document.title = item.title + ' — Anushka Singh';
         document.getElementById('project-title').textContent = item.title;
