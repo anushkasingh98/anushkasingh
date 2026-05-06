@@ -3,11 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Anushka Singh — AI Strategist, Legacy Code Whisperer, Kathak Dancer</title>
-  <meta name="description" content="Part AI strategist. Part legacy code whisperer. Part dancer. Fully unhinged generalist. Founder of Kathalyst.">
-  <meta property="og:title" content="Anushka Singh — Fully Unhinged Generalist">
-  <meta property="og:description" content="I modernize COBOL, ship AI products, and dance Kathak. Yes, all of those at once. Sometimes.">
-  <meta property="og:type" content="website">
+  <title>Post — Anushka Singh</title>
+  <meta name="description" content="A blog post by Anushka Singh. Probably about COBOL, AI, or Kathak. Possibly all three.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -34,49 +31,15 @@
   </nav>
 
   <main>
-    <section class="hero container">
-      <span class="hero__eyebrow">Founder of Kathalyst</span>
-      <h1 class="hero__title">Hey, I'm Anushka <span class="wave">~</span></h1>
-      <p class="hero__tagline">Part <em>AI strategist</em>. Part legacy code whisperer. Part dancer. Fully unhinged generalist. I help enterprises modernize ancient systems with AI, and I perform Kathak classical dance &mdash; because range matters.</p>
-      <a href="services.html" class="hero__cta">see what I actually do</a>
-    </section>
-
-    <hr class="divider container">
-
-    <section class="featured container">
-      <div class="featured__header">
-        <div>
-          <h2>Recent Ramblings</h2>
-          <span class="section-header__aside">// opinions, shipped hot</span>
-        </div>
-        <a href="blog.html" class="featured__more">all posts ~></a>
-      </div>
-      <div class="card-grid" id="featured-blog"></div>
-    </section>
-
-    <section class="featured container section--squiggly">
-      <div class="featured__header">
-        <div>
-          <h2>Things I've Built</h2>
-          <span class="section-header__aside">// some shipped, some still simmering</span>
-        </div>
-        <a href="projects.html" class="featured__more">all projects ~></a>
-      </div>
-      <div class="card-grid" id="featured-projects"></div>
-    </section>
-
-    <section class="contact">
-      <div class="container">
-        <h2>Wanna chat?</h2>
-        <p>Whether it's about modernizing your COBOL monolith, shipping an AI product, or choreographing a tech-meets-dance collab &mdash; I'm game. Hit me up.</p>
-        <a href="mailto:anushka.singh098@gmail.com" class="contact__email">anushka.singh098@gmail.com</a>
-        <ul class="contact__socials">
-          <li><a href="https://linkedin.com/in/anushkasingh" class="contact__social" target="_blank" rel="noopener">LinkedIn</a></li>
-          <li><a href="https://github.com/anushkasingh" class="contact__social" target="_blank" rel="noopener">GitHub</a></li>
-          <li><a href="https://twitter.com/anushkasingh" class="contact__social" target="_blank" rel="noopener">Twitter</a></li>
-        </ul>
-      </div>
-    </section>
+    <article class="post container--narrow">
+      <a href="blog.html" class="post__back">&larr; back to all posts</a>
+      <header class="post__header">
+        <time class="post__date" id="post-date"></time>
+        <h1 class="post__title" id="post-title">Loading...</h1>
+        <div class="post__tags" id="post-tags"></div>
+      </header>
+      <div class="post__content" id="post-content"></div>
+    </article>
   </main>
 
   <footer class="footer">
@@ -125,25 +88,26 @@
   <script src="../shared/js/router.js"></script>
   <script src="js/main.js"></script>
   <script>
-    ContentLoader.init({
+    Router.loadBySlug({
       manifestUrl: '../content/blog-manifest.json',
-      containerSelector: '#featured-blog',
-      templateFn: blogCardTemplate
-    });
-    // Load projects separately
-    (async () => {
-      try {
-        const res = await fetch('../content/projects-manifest.json');
-        const items = await res.json();
-        items.sort((a, b) => new Date(b.date) - new Date(a.date));
-        const container = document.getElementById('featured-projects');
-        if (container) {
-          container.innerHTML = items.map(projectCardTemplate).join('');
+      contentBase: '../content/',
+      renderFn: (item, html) => {
+        document.title = item.title + ' — Anushka Singh';
+        document.getElementById('post-title').textContent = item.title;
+        document.getElementById('post-date').textContent = Router.formatDate(item.date);
+        document.getElementById('post-date').setAttribute('datetime', item.date);
+        document.getElementById('post-content').innerHTML = html;
+        if (item.tags) {
+          document.getElementById('post-tags').innerHTML = item.tags.map(t =>
+            '<span class="card__tag">' + t + '</span>'
+          ).join('');
         }
-      } catch (e) {
-        console.error('Failed to load projects:', e);
+      },
+      notFoundFn: () => {
+        document.getElementById('post-title').textContent = 'Post Not Found';
+        document.getElementById('post-content').innerHTML = '<p>This post doesn\'t exist. Maybe it\'s still in drafts? Maybe it ran away? Try <a href="blog.html">browsing all posts</a> instead.</p>';
       }
-    })();
+    });
   </script>
 </body>
 </html>

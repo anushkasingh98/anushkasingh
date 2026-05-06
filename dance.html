@@ -3,11 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Anushka Singh — AI Strategist, Legacy Code Whisperer, Kathak Dancer</title>
-  <meta name="description" content="Part AI strategist. Part legacy code whisperer. Part dancer. Fully unhinged generalist. Founder of Kathalyst.">
-  <meta property="og:title" content="Anushka Singh — Fully Unhinged Generalist">
-  <meta property="og:description" content="I modernize COBOL, ship AI products, and dance Kathak. Yes, all of those at once. Sometimes.">
-  <meta property="og:type" content="website">
+  <title>Kathak — Anushka Singh</title>
+  <meta name="description" content="Anushka Singh's Kathak dance practice. Yes, the same person who debugs COBOL also does intricate footwork at 200 BPM. We contain multitudes.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -34,47 +31,57 @@
   </nav>
 
   <main>
-    <section class="hero container">
-      <span class="hero__eyebrow">Founder of Kathalyst</span>
-      <h1 class="hero__title">Hey, I'm Anushka <span class="wave">~</span></h1>
-      <p class="hero__tagline">Part <em>AI strategist</em>. Part legacy code whisperer. Part dancer. Fully unhinged generalist. I help enterprises modernize ancient systems with AI, and I perform Kathak classical dance &mdash; because range matters.</p>
-      <a href="services.html" class="hero__cta">see what I actually do</a>
+    <section class="dance-hero">
+      <div>
+        <h1 class="dance-hero__title">Kathak</h1>
+        <p class="dance-hero__subtitle">Where rhythm meets storytelling, and where a software engineer puts on ghungroos and becomes someone else entirely. (Or maybe the same person, just louder.)</p>
+      </div>
     </section>
 
-    <hr class="divider container">
-
-    <section class="featured container">
-      <div class="featured__header">
-        <div>
-          <h2>Recent Ramblings</h2>
-          <span class="section-header__aside">// opinions, shipped hot</span>
-        </div>
-        <a href="blog.html" class="featured__more">all posts ~></a>
+    <section class="dance-section container">
+      <div class="section-header">
+        <h2 class="section-header__title">The Art</h2>
+        <span class="section-header__aside">// the original storytelling framework</span>
       </div>
-      <div class="card-grid" id="featured-blog"></div>
+      <p>Kathak is one of the eight major forms of Indian classical dance. Originating from Northern India, it combines intricate footwork, expressive storytelling, and rhythmic precision. The word "Kathak" comes from "katha" &mdash; meaning story. Every performance is a conversation between rhythm, emotion, and narrative.</p>
+      <p>Trained under renowned gurus in the Lucknow gharana tradition, I've been practicing Kathak for over 15 years. The discipline of daily riyaaz (practice) mirrors the discipline of writing clean code &mdash; both demand patience, precision, and an obsessive attention to detail. Also, both make you lose track of time completely.</p>
     </section>
 
-    <section class="featured container section--squiggly">
-      <div class="featured__header">
-        <div>
-          <h2>Things I've Built</h2>
-          <span class="section-header__aside">// some shipped, some still simmering</span>
+    <section class="dance-section section--alt">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-header__title">Gallery</h2>
+          <span class="section-header__aside">// proof that I actually do this</span>
         </div>
-        <a href="projects.html" class="featured__more">all projects ~></a>
+        <div class="dance-gallery">
+          <div class="dance-gallery__item">// performance photo 1</div>
+          <div class="dance-gallery__item">// performance photo 2</div>
+          <div class="dance-gallery__item">// performance photo 3</div>
+          <div class="dance-gallery__item">// performance photo 4</div>
+          <div class="dance-gallery__item">// performance photo 5</div>
+          <div class="dance-gallery__item">// performance photo 6</div>
+        </div>
       </div>
-      <div class="card-grid" id="featured-projects"></div>
+    </section>
+
+    <section class="dance-section container">
+      <div class="section-header">
+        <h2 class="section-header__title">Highlights</h2>
+        <span class="section-header__aside">// greatest hits, if you will</span>
+      </div>
+      <ul class="dance-highlights">
+        <li>Solo performances at national cultural festivals</li>
+        <li>Collaborative pieces blending classical Kathak with contemporary music</li>
+        <li>Workshops on rhythm and movement for tech communities (yes, really)</li>
+        <li>Exploring generative art inspired by Kathak patterns</li>
+      </ul>
     </section>
 
     <section class="contact">
       <div class="container">
-        <h2>Wanna chat?</h2>
-        <p>Whether it's about modernizing your COBOL monolith, shipping an AI product, or choreographing a tech-meets-dance collab &mdash; I'm game. Hit me up.</p>
+        <h2>Want to see me dance?</h2>
+        <p>Interested in a Kathak performance, a cross-disciplinary collaboration, or a workshop where I make engineers do body rolls? I'm in.</p>
         <a href="mailto:anushka.singh098@gmail.com" class="contact__email">anushka.singh098@gmail.com</a>
-        <ul class="contact__socials">
-          <li><a href="https://linkedin.com/in/anushkasingh" class="contact__social" target="_blank" rel="noopener">LinkedIn</a></li>
-          <li><a href="https://github.com/anushkasingh" class="contact__social" target="_blank" rel="noopener">GitHub</a></li>
-          <li><a href="https://twitter.com/anushkasingh" class="contact__social" target="_blank" rel="noopener">Twitter</a></li>
-        </ul>
       </div>
     </section>
   </main>
@@ -117,33 +124,6 @@
     </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <script src="../shared/js/site-config.js"></script>
-  <script src="../shared/js/markdown-engine.js"></script>
-  <script src="../shared/js/content-loader.js"></script>
-  <script src="../shared/js/tag-filter.js"></script>
-  <script src="../shared/js/router.js"></script>
   <script src="js/main.js"></script>
-  <script>
-    ContentLoader.init({
-      manifestUrl: '../content/blog-manifest.json',
-      containerSelector: '#featured-blog',
-      templateFn: blogCardTemplate
-    });
-    // Load projects separately
-    (async () => {
-      try {
-        const res = await fetch('../content/projects-manifest.json');
-        const items = await res.json();
-        items.sort((a, b) => new Date(b.date) - new Date(a.date));
-        const container = document.getElementById('featured-projects');
-        if (container) {
-          container.innerHTML = items.map(projectCardTemplate).join('');
-        }
-      } catch (e) {
-        console.error('Failed to load projects:', e);
-      }
-    })();
-  </script>
 </body>
 </html>

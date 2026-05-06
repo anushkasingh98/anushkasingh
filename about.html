@@ -3,11 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Anushka Singh — AI Strategist, Legacy Code Whisperer, Kathak Dancer</title>
-  <meta name="description" content="Part AI strategist. Part legacy code whisperer. Part dancer. Fully unhinged generalist. Founder of Kathalyst.">
-  <meta property="og:title" content="Anushka Singh — Fully Unhinged Generalist">
-  <meta property="og:description" content="I modernize COBOL, ship AI products, and dance Kathak. Yes, all of those at once. Sometimes.">
-  <meta property="og:type" content="website">
+  <title>About — Anushka Singh</title>
+  <meta name="description" content="The full story of how one person ended up doing AI consulting, COBOL archaeology, and classical Indian dance. It's a journey.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -34,41 +31,54 @@
   </nav>
 
   <main>
-    <section class="hero container">
-      <span class="hero__eyebrow">Founder of Kathalyst</span>
-      <h1 class="hero__title">Hey, I'm Anushka <span class="wave">~</span></h1>
-      <p class="hero__tagline">Part <em>AI strategist</em>. Part legacy code whisperer. Part dancer. Fully unhinged generalist. I help enterprises modernize ancient systems with AI, and I perform Kathak classical dance &mdash; because range matters.</p>
-      <a href="services.html" class="hero__cta">see what I actually do</a>
+    <section class="section container">
+      <div class="about-hero">
+        <div class="about-photo">// photo of anushka</div>
+        <div class="about-content">
+          <h1>The Full Story</h1>
+          <p>I'm Anushka Singh &mdash; the founder of <strong>Kathalyst</strong>, where I help organizations untangle decades of legacy code and reimagine their tech stacks with AI. If that sounds like a weirdly specific niche, that's because it is. And I love it.</p>
+          <p>My consulting work spans COBOL modernization, AI strategy, and building products that actually ship. When I'm not debugging mainframes or advising startups, I'm a trained Kathak dancer, bringing the same discipline and precision to the stage that I bring to a codebase.</p>
+          <p>I believe the best work happens at intersections &mdash; of art and engineering, of old and new, of tradition and innovation. The kind of work that makes people go "wait, the same person does both of those things?"</p>
+          <span class="about-quirk">// yes, the same person does both of those things</span>
+        </div>
+      </div>
     </section>
 
     <hr class="divider container">
 
-    <section class="featured container">
-      <div class="featured__header">
-        <div>
-          <h2>Recent Ramblings</h2>
-          <span class="section-header__aside">// opinions, shipped hot</span>
-        </div>
-        <a href="blog.html" class="featured__more">all posts ~></a>
+    <section class="section container">
+      <div class="section-header">
+        <h2 class="section-header__title">Things I Believe</h2>
+        <span class="section-header__aside">// strong opinions, loosely held (most of the time)</span>
       </div>
-      <div class="card-grid" id="featured-blog"></div>
-    </section>
-
-    <section class="featured container section--squiggly">
-      <div class="featured__header">
-        <div>
-          <h2>Things I've Built</h2>
-          <span class="section-header__aside">// some shipped, some still simmering</span>
+      <div class="beliefs-grid">
+        <div class="belief-card">
+          <span class="belief-card__number">01</span>
+          <h3>Intersections Create Value</h3>
+          <p>The most interesting work happens where different disciplines meet. My best insights about code come from dance, and my best insights about performance come from engineering. Fight me.</p>
         </div>
-        <a href="projects.html" class="featured__more">all projects ~></a>
+        <div class="belief-card">
+          <span class="belief-card__number">02</span>
+          <h3>Old Code Deserves Respect</h3>
+          <p>That COBOL system running your bank? It's survived 40 years of changes, edge cases, and business logic. Don't dismiss it &mdash; understand it, then improve it. It's earned that much.</p>
+        </div>
+        <div class="belief-card">
+          <span class="belief-card__number">03</span>
+          <h3>Ship, Then Polish</h3>
+          <p>I'd rather ship something useful today than design something perfect that never launches. Iterative improvement beats theoretical perfection every single time. The whiteboard won't save you.</p>
+        </div>
+        <div class="belief-card">
+          <span class="belief-card__number">04</span>
+          <h3>Discipline Is Freedom</h3>
+          <p>In Kathak, strict rhythm gives you the framework to improvise freely. In code, good architecture lets you move fast. Constraints enable creativity. Yes, I will die on this hill.</p>
+        </div>
       </div>
-      <div class="card-grid" id="featured-projects"></div>
     </section>
 
     <section class="contact">
       <div class="container">
-        <h2>Wanna chat?</h2>
-        <p>Whether it's about modernizing your COBOL monolith, shipping an AI product, or choreographing a tech-meets-dance collab &mdash; I'm game. Hit me up.</p>
+        <h2>Say hi. Seriously.</h2>
+        <p>I'm always open to interesting conversations, weird collaborations, and consulting gigs that actually challenge me. The worst I can say is "I'm booked." (But probably not.)</p>
         <a href="mailto:anushka.singh098@gmail.com" class="contact__email">anushka.singh098@gmail.com</a>
         <ul class="contact__socials">
           <li><a href="https://linkedin.com/in/anushkasingh" class="contact__social" target="_blank" rel="noopener">LinkedIn</a></li>
@@ -117,33 +127,6 @@
     </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <script src="../shared/js/site-config.js"></script>
-  <script src="../shared/js/markdown-engine.js"></script>
-  <script src="../shared/js/content-loader.js"></script>
-  <script src="../shared/js/tag-filter.js"></script>
-  <script src="../shared/js/router.js"></script>
   <script src="js/main.js"></script>
-  <script>
-    ContentLoader.init({
-      manifestUrl: '../content/blog-manifest.json',
-      containerSelector: '#featured-blog',
-      templateFn: blogCardTemplate
-    });
-    // Load projects separately
-    (async () => {
-      try {
-        const res = await fetch('../content/projects-manifest.json');
-        const items = await res.json();
-        items.sort((a, b) => new Date(b.date) - new Date(a.date));
-        const container = document.getElementById('featured-projects');
-        if (container) {
-          container.innerHTML = items.map(projectCardTemplate).join('');
-        }
-      } catch (e) {
-        console.error('Failed to load projects:', e);
-      }
-    })();
-  </script>
 </body>
 </html>
